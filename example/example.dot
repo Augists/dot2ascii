@@ -1,0 +1,10 @@
+digraph graphname {
+    a [label="Foo"];    // 修改名称
+    b [shape=box];    // 修改形状
+    a -> b -> c [color=blue];    // 修改边颜色
+    b -> d [dir=none];
+    c -> d [style=dotted label="edgename"];
+    
+    # 手动强制布局
+    { rank=same; a b c }
+}
