@@ -11,10 +11,10 @@ cp bin/dot2ascii-your-os /path/to/env
 ```
 
 ```bash
-dot2ascii <dot文件路径> [--fancy] [--show]
-  <dot文件路径> 必填，dot文件路径
+dot2ascii [--fancy] [--show] <dot文件路径>
   --fancy       可选，是否使用 boxart 字符（默认 false）
   --show        可选，是否打印读取的文件内容（默认 false）
+  <dot文件路径> 必填，dot文件路径
 ```
 
 ## Example
@@ -42,4 +42,20 @@ $ ./dot2ascii-darwin example/example.dot
 +-----------+  |
 |     d     | -+
 +-----------+
+```
+
+```bash
+$ dot2ascii --fancy example/example2.dot
+
+                 ┌─────────┐
+                 │         │
+     ┌───┐     ┌───┐     ┌───┐     ┌───┐
+  ┌─ │ 0 │ ─── │ 1 │ ─── │   │ ─── │ 3 │
+  │  └───┘     └───┘     │   │     └───┘
+  │    │                 │   │
+  │    └──────────────── │ 2 │
+  │                      │   │
+  │                      │   │
+  └───────────────────── │   │
+                         └───┘
 ```

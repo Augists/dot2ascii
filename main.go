@@ -47,10 +47,10 @@ func main() {
 		show  = flag.Bool("show", false, "是否打印读取的文件内容")
 	)
 	flag.Usage = func() {
-		fmt.Println("用法: dot <dot文件路径> [--fancy] [--show]")
-		fmt.Println("  <dot文件路径> 必填，dot文件路径")
+		fmt.Println("用法: dot [--fancy] [--show] <dot文件路径>")
 		fmt.Println("  --fancy       可选，是否使用 boxart 字符（默认 false）")
 		fmt.Println("  --show        可选，是否打印读取的文件内容（默认 false）")
+		fmt.Println("  <dot文件路径> 必填，dot文件路径")
 	}
 	flag.Parse()
 
